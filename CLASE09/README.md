@@ -41,12 +41,12 @@ Explicación de la creación de una EC2 en AWS y la instalación de Docker en la
 1. Crear imagen de docker
 
    ```sh
-   docker build -t go-fiber-app .
+   sudo docker build -t go-fiber-app .
    ```
 
 2. Ejecutar contenedor
    ```sh
-   docker run -p 3000:3000 go-fiber-app
+   sudo docker run -p 3000:3000 go-fiber-app
    ```
 
 ### Comandos docker
@@ -54,17 +54,17 @@ Explicación de la creación de una EC2 en AWS y la instalación de Docker en la
 1. Visualizar las imagenes de docker
 
 ```sh
-docker images
+sudo docker images
 ```
 
 2. Visualizar los contenedores activos
 
 ```sh
-docker ps
+sudo docker ps
 ```
 
 3. Visualizar todos los contenedores
 
 ```sh
-docker ps -a
+sudo docker ps -a
 ```

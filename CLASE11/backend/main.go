@@ -15,7 +15,10 @@ func main() {
 	app := fiber.New()
 
 	// Configurar el middleware CORS
-	app.Use(cors.New())
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*", // Permitir solicitudes desde cualquier origen
+		AllowMethods: "GET,POST,HEAD,PUT,DELETE,PATCH,OPTIONS",
+	}))
 
 	// Definir la ruta POST para recibir el comando del usuario
 	app.Post("/analyze", func(c *fiber.Ctx) error {
