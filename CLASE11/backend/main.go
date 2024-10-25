@@ -71,6 +71,6 @@ func main() {
 		})
 	})
 
-	// Iniciar el servidor en el puerto 3000
-	log.Fatal(app.Listen(":3000"))
+	// Iniciar el servidor en el puerto 3000 y escuchar en todas las interfaces
+	log.Fatal(app.Listen("0.0.0.0:3000"))
 }
