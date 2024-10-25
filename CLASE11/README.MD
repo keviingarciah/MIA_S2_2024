@@ -1,32 +1,11 @@
-# Clase 10
+# Clase 11
 
-En esta clase se abordó el flujo de la Web App, al igual que se enseño como desplegar una aplicación en AWS S3.
+En esta clase se enseñ+o como conectar el servidor en EC2 con el cliente en S3.
 
-## Buildear la aplicación
-
-En mi caso utilicé Vite con Bun para el desarrollo de la aplicación, por lo que para buildear la aplicación se debe ejecutar el siguiente comando:
+## Variable de entorno
 
 ```bash
-bunx --bun vite build
-```
-
-## Política de acceso a S3
-
-Para que los archivos de la aplicación sean accesibles desde la web, se debe configurar una política de acceso en el bucket de S3. Para ello se debe acceder a la consola de AWS y en el bucket correspondiente se debe ir a la pestaña de permisos y en la sección de "Políticas de bucket" se debe agregar la siguiente política:
-
-```bash
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::NOMBRE_DEL_BUCKET/*"
-    }
-  ]
-}
-```
-
 VITE_API_URL=http://IP_PUBLICA:3000
+```
+
+![Video](https://drive.google.com/file/d/1ohE4tZd-f11ZL-GNXVtlmAlm91wYP3Tr/view)
