@@ -28,3 +28,5 @@ Para que los archivos de la aplicación sean accesibles desde la web, se debe co
   ]
 }
 ```
+
+VITE_API_URL=http://IP_PUBLICA:3000
